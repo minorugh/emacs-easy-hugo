@@ -1,4 +1,4 @@
-This script was forked from the masaam/emacs-easy-hugo repository and modified to support evil-mode.
+This script was Forked from masasam/emacs-easy-hugo and modified to support evil-mode.
 
 # easy-hugo [![melpa badge][melpa-badge]][melpa-link] [![melpa stable badge][melpa-stable-badge]][melpa-stable-link] [![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
