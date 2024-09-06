@@ -915,8 +915,10 @@ POST-FILE needs to have and extension '.md' or '.org' or '.ad' or '.rst' or '.mm
      (when (get-buffer "*hugo*")
        (kill-buffer "*hugo*"))
      (find-file filename)
+     (when evil-mode
+       (evil-insert-state))
      (when (and easy-hugo-org-header
-	       (string-equal file-ext "org"))
+		(string-equal file-ext "org"))
        (insert (easy-hugo--org-headers (file-name-base post-file))))
      (goto-char (point-max))
      (save-buffer))))
@@ -1398,11 +1400,11 @@ to the server."
 (defcustom easy-hugo-help
   (if (null easy-hugo-sort-default-char)
       (progn
-	"n .. New blog post    R .. Rename file   G .. Deploy GitHub    D .. Draft list
+	"n .. New blog post    r .. Rename file   G .. Deploy GitHub    D .. Draft list
 p .. Preview          g .. Refresh       A .. Deploy AWS S3    u .. Sort publishday
 v .. Open view-mode   s .. Sort time     T .. Publish timer    N .. No help-mode
-d .. Delete post      c .. Open config   W .. AWS S3 timer     f .. Select filename
-P .. Publish clever   C .. Deploy GCS    a .. Search with ag   H .. GitHub timer
+d .. Delete post      c .. Open config   e .. Edit easy-hugo   f .. Select filename
+P .. Publish clever   o .. Open basedir  a .. Search with ag   H .. GitHub timer
 < .. Previous blog    > .. Next blog     , .. Pre postdir      . .. Next postdir
 F .. Full help [tab]  ; .. Select blog   / .. Select postdir   q .. Quit easy-hugo
 ")
