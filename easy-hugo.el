@@ -1,6 +1,7 @@
 ;;; easy-hugo.el --- Write blogs made with hugo by markdown or org-mode -*- lexical-binding: t; -*-
 
 ;; Copyright (C) 2017-2024 by Masashi Miyaura
+;; Modify for evil-mode 2024-09-06 by Minoru Yamada
 
 ;; Author: Masashi Miyaura
 ;; URL: https://github.com/masasam/emacs-easy-hugo
